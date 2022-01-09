@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="530.0" prefWidth="739.0" style="-fx-background-color: #DB7093;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controllers.admin.AdminDeactivatedProductsController">
+   <children>
+      <TableView fx:id="myAdsTable" layoutX="-3.0" layoutY="-1.0" prefHeight="433.0" prefWidth="739.0">
+         <columns>
+            <TableColumn fx:id="nameColumn" prefWidth="112.0000274181366" text="Name" />
+            <TableColumn fx:id="categoryColumn" prefWidth="84.79998779296875" text="Category" />
+            <TableColumn fx:id="priceColumn" prefWidth="88.80000305175781" text="Price" />
+            <TableColumn fx:id="descriptionColumn" prefWidth="226.39996337890625" text="Description" />
+            <TableColumn fx:id="deactivationDate" prefWidth="128.79998779296875" text="Deactivation date" />
+            <TableColumn fx:id="uploaderColumn" prefWidth="95.20001220703125" text="Uploader" />
+         </columns>
+      </TableView>
+      <Button fx:id="deleteButton" layoutX="539.0" layoutY="441.0" mnemonicParsing="false" onAction="#deleteButtonOnAction" prefHeight="33.0" prefWidth="114.0" style="-fx-background-color: #8B0000;" text="Delete" textFill="#fffbfb" />
+      <Label fx:id="errorLabel" layoutX="33.0" layoutY="449.0" prefHeight="34.0" prefWidth="314.0" textFill="#0a0e48">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

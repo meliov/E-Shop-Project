@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="611.0" prefWidth="1020.0" style="-fx-background-color: #9932CC;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controllers.user.FavouritesController">
+   <children>
+      <TableView fx:id="myAdsTable" layoutX="5.0" layoutY="15.0" prefHeight="506.0" prefWidth="991.0">
+         <columns>
+            <TableColumn fx:id="productNameColumn" prefWidth="112.0000274181366" text="Name of product" />
+            <TableColumn fx:id="categoryColumn" prefWidth="84.79998779296875" text="Category" />
+            <TableColumn fx:id="priceColumn" prefWidth="88.80000305175781" text="Price" />
+            <TableColumn fx:id="descriptionColumn" prefWidth="325.6000061035156" text="Description" />
+            <TableColumn fx:id="uploaderColumn" prefWidth="116.79998779296875" text="Uploader" />
+            <TableColumn fx:id="uploaderMailColumn" prefWidth="126.4000244140625" text="Uploader e-mail" />
+            <TableColumn fx:id="dateColumn" prefWidth="132.8000366210938" text="Date of uploading" />
+         </columns>
+      </TableView>
+      <Button fx:id="deleteButton" layoutX="720.0" layoutY="524.0" mnemonicParsing="false" onAction="#deleteButtonOnAction" prefHeight="45.0" prefWidth="106.0" style="-fx-background-color: #8B0000;" text="Delete" textFill="WHITE">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Button>
+      <Label fx:id="errorLabel" layoutX="161.0" layoutY="533.0" prefHeight="26.0" prefWidth="521.0" textFill="#cc1313">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Button layoutX="14.0" layoutY="523.0" mnemonicParsing="false" onAction="#sendMessageButtonOnAction" prefHeight="46.0" prefWidth="106.0" style="-fx-background-color: #4169E1;" text="Send Message" textFill="WHITE" />
+   </children>
+</AnchorPane>

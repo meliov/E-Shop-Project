@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<Accordion fx:id="userAccordion" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="672.0" prefWidth="961.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controllers.user.UserController">
+  <panes>
+    <TitledPane fx:id="myProfilePane" animated="false" prefHeight="550.0" prefWidth="914.0" text="My profile">
+         <content>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #FAFAD2;">
+               <children>
+                  <Button fx:id="exitButton" layoutX="837.0" layoutY="23.0" mnemonicParsing="false" onAction="#exitButtonOnAction" style="-fx-background-color: #556B2F;" text="Exit" />
+                  <Label fx:id="greetingLabel" layoutX="1.0" layoutY="56.0" prefHeight="41.0" prefWidth="198.0" text="hello name">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="emailLabel" layoutX="11.0" layoutY="124.0" prefHeight="28.0" prefWidth="178.0" text="email">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="favouritesButton" layoutX="24.0" layoutY="249.0" mnemonicParsing="false" onAction="#favouritesButtonOnAction" prefHeight="40.0" prefWidth="126.0" style="-fx-background-color: #800080;" text="Favourites" textFill="WHITE" />
+                  <Label layoutX="246.0" layoutY="29.0" prefHeight="18.0" prefWidth="99.0" text="My products" />
+                  <Button fx:id="deleteAdButton" layoutX="770.0" layoutY="495.0" mnemonicParsing="false" onAction="#deleteAdButtonOnAction" prefHeight="34.0" prefWidth="109.0" style="-fx-background-color: #B22222;" text="Delete" />
+                  <Button fx:id="deactivateAdButton" layoutX="645.0" layoutY="495.0" mnemonicParsing="false" onAction="#deactivateAdButtonOnAction" prefHeight="34.0" prefWidth="109.0" style="-fx-background-color: #FFA07A;" text="Deactivate" />
+                  <Button fx:id="editAdButton" layoutX="519.0" layoutY="495.0" mnemonicParsing="false" onAction="#editAdButtonOnAction" prefHeight="34.0" prefWidth="109.0" style="-fx-background-color: #FFB6C1;" text="Edit " />
+                  <Button fx:id="showDeactivatedButton" layoutX="640.0" layoutY="548.0" mnemonicParsing="false" onAction="#showDeactivatedButtonOnAction" style="-fx-background-color: #7CFC00;" text="Show Deactivated" />
+                  <Button fx:id="refreshButton" layoutX="27.0" layoutY="24.0" mnemonicParsing="false" onAction="#refreshButtonOnAction" prefHeight="28.0" prefWidth="113.0" style="-fx-background-color: #1E90FF;" text="Refresh" />
+                  <AnchorPane layoutX="195.0" layoutY="65.0" minHeight="0.0" minWidth="0.0" prefHeight="426.0" prefWidth="733.0">
+                     <children>
+                        <TableView fx:id="myAdsTable" layoutX="2.0" layoutY="1.0" prefHeight="426.0" prefWidth="733.0">
+                           <columns>
+                              <TableColumn fx:id="nameColumn" prefWidth="112.0000274181366" text="Name" />
+                              <TableColumn fx:id="categoryColumn" prefWidth="84.79998779296875" text="Category" />
+                              <TableColumn fx:id="priceColumn" prefWidth="88.80000305175781" text="Price" />
+                              <TableColumn fx:id="descriptionColumn" prefWidth="317.5999755859375" text="Description" />
+                              <TableColumn fx:id="dateColumn" prefWidth="127.2000732421875" text="Date of uploading" />
+                           </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+                  <Label fx:id="noSelectedProductLabel" layoutX="194.0" layoutY="494.0" prefHeight="22.0" prefWidth="301.0" textFill="#ef0000">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="showAllButton" layoutX="20.0" layoutY="491.0" mnemonicParsing="false" onAction="#showAllButtonOnAction" prefHeight="37.0" prefWidth="127.0" style="-fx-background-color: #008080;" text="Show Products" textFill="WHITE" />
+                  <Label layoutX="20.0" layoutY="324.0" prefHeight="18.0" prefWidth="96.0" text="Start Date" />
+                  <TextField fx:id="startDateTextField" layoutX="11.0" layoutY="342.0" prefHeight="22.0" prefWidth="171.0" promptText="dd.mm.yyyy" />
+                  <Label layoutX="20.0" layoutY="402.0" prefHeight="18.0" prefWidth="96.0" text="End Date" />
+                  <TextField fx:id="endDateTextField" layoutX="11.0" layoutY="421.0" prefHeight="22.0" prefWidth="171.0" promptText="dd.mm.yyyy" />
+                  <Label fx:id="startDateErrorLabel" layoutX="14.0" layoutY="374.0" prefHeight="18.0" prefWidth="146.0" textFill="#ef0808" />
+                  <Label fx:id="endDateErrorLabel" layoutX="14.0" layoutY="456.0" prefHeight="18.0" prefWidth="146.0" textFill="#ef0808" />
+                  <Button layoutX="24.0" layoutY="186.0" mnemonicParsing="false" onAction="#chatButtonOnAction" prefHeight="45.0" prefWidth="127.0" style="-fx-background-color: #40E0D0;" text="Open Chat" textFill="WHITE" />
+               </children></AnchorPane>
+         </content></TitledPane>
+    <TitledPane animated="false" text="Upload ad">
+         <content>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #FFF0F5;">
+               <children>
+                  <Label layoutX="66.0" layoutY="57.0" prefHeight="26.0" prefWidth="253.0" text="What do you offer?">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="productNameTextField" layoutX="66.0" layoutY="83.0" promptText="Name of your product" />
+                  <Label layoutX="66.0" layoutY="130.0" prefHeight="18.0" prefWidth="142.0" text="Category">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="categoryComboBox" layoutX="62.0" layoutY="150.0" onAction="#categoryOnAction" prefWidth="150.0" promptText="Chose category" />
+                  <Label layoutX="64.0" layoutY="271.0" prefHeight="28.0" prefWidth="154.0" text="Describe your product">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <TextArea fx:id="descriptionTextArea" layoutX="58.0" layoutY="307.0" prefHeight="86.0" prefWidth="370.0" promptText="Describe your product with at least 15 symbols(max 80)" />
+                  <Label fx:id="categoryLabelError" layoutX="236.0" layoutY="156.0" prefHeight="20.0" prefWidth="306.0" textFill="#cf2b15" />
+                  <Label fx:id="descriptionLabelError" layoutX="217.0" layoutY="276.0" prefHeight="5.0" prefWidth="314.0" textFill="#c91111" />
+                  <Button fx:id="uploadButton" layoutX="585.0" layoutY="387.0" mnemonicParsing="false" onAction="#uploadButtonOnAction" prefHeight="75.0" prefWidth="176.0" style="-fx-background-color: #9C51B6;" text="Upload" textFill="WHITE">
+                     <font>
+                        <Font name="System Italic" size="24.0" />
+                     </font>
+                  </Button>
+                  <Label fx:id="nameLabelError" layoutX="240.0" layoutY="86.0" prefHeight="20.0" prefWidth="306.0" textFill="#cf2b15" />
+                  <Label layoutX="66.0" layoutY="210.0" prefHeight="28.0" prefWidth="110.0" text="Price of product" />
+                  <TextField fx:id="priceTextField" layoutX="62.0" layoutY="238.0" />
+                  <Label fx:id="priceLabelError" layoutX="232.0" layoutY="241.0" prefHeight="5.0" prefWidth="314.0" textFill="#c91111" />
+                  <Label fx:id="successfulUploadingLabel" layoutX="480.0" layoutY="170.0" prefHeight="28.0" prefWidth="394.0" textFill="#a029e3c4">
+                     <font>
+                        <Font size="27.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </content></TitledPane>
+  </panes>
+</Accordion>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #FFA500;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controllers.admin.AdminRegistrationController">
+   <children>
+      <ImageView fitHeight="212.0" fitWidth="317.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@admins-reg.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="374.0" layoutY="32.0" text="First Name">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="firstNameField" layoutX="442.0" layoutY="29.0" />
+      <Label layoutX="375.0" layoutY="68.0" text="Last Name">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="lastNameField" layoutX="442.0" layoutY="65.0" />
+      <Label layoutX="375.0" layoutY="105.0" text="Username">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="usernameField" layoutX="442.0" layoutY="102.0" />
+      <Label layoutX="376.0" layoutY="137.0" text="E-mail">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="emailField" layoutX="442.0" layoutY="134.0" />
+      <PasswordField fx:id="passwordField" layoutX="443.0" layoutY="176.0" />
+      <Label layoutX="376.0" layoutY="179.0" text="Password">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="messageLabelUsername" layoutX="3.0" layoutY="220.0" prefHeight="26.0" prefWidth="360.0" textFill="#c40a0a">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Button fx:id="signupButton" layoutX="430.0" layoutY="301.0" mnemonicParsing="false" onAction="#signupButtonOnAction" prefHeight="34.0" prefWidth="103.0" style="-fx-background-color: #FF6347;" text="Signup" />
+      <Label fx:id="messageLabelEmail" layoutX="3.0" layoutY="331.0" prefHeight="26.0" prefWidth="360.0" textFill="#c40a0a">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="messageLabelPassword" layoutX="3.0" layoutY="305.0" prefHeight="26.0" prefWidth="360.0" textFill="#c40a0a">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="flNameLabel" layoutX="3.0" layoutY="352.0" prefHeight="26.0" prefWidth="360.0" textFill="#c40a0a">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="signedLabel" layoutX="366.0" layoutY="249.0" prefHeight="20.0" prefWidth="232.0" textFill="#0cea3c" />
+   </children>
+</AnchorPane>

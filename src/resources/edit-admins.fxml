@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #AFEEEE;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controllers.admin.EditAdminsController">
+   <children>
+      <PasswordField fx:id="newPasswordField" layoutX="84.0" layoutY="166.0" />
+      <TextField fx:id="emailTextField" layoutX="84.0" layoutY="70.0" />
+      <Label layoutX="84.0" layoutY="42.0" text="New E-mail" />
+      <Label layoutX="84.0" layoutY="148.0" text="New Password" />
+      <Label fx:id="passwordErrorLabel" layoutX="84.0" layoutY="209.0" prefHeight="26.0" prefWidth="256.0" textFill="#e10d0d" />
+      <Button layoutX="392.0" layoutY="59.0" mnemonicParsing="false" onAction="#applyEmailButtonOnAction" prefHeight="46.0" prefWidth="118.0" style="-fx-background-color: #2E8B57;" text="Apply Email" textFill="WHITE" />
+      <Label fx:id="emailErrorLabel" layoutX="84.0" layoutY="96.0" prefHeight="26.0" prefWidth="256.0" textFill="#e10d0d" />
+      <Label fx:id="successEmailLabel" layoutX="383.0" layoutY="122.0" prefHeight="26.0" prefWidth="174.0" textFill="#1c8e37">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Button layoutX="392.0" layoutY="269.0" mnemonicParsing="false" onAction="#applyPasswordButtonOnAction" prefHeight="46.0" prefWidth="118.0" style="-fx-background-color: #2E8B57;" text="Apply Password" textFill="WHITE" />
+      <Label fx:id="successPasswordLabel" layoutX="84.0" layoutY="235.0" prefHeight="26.0" prefWidth="174.0" textFill="#1c8e37">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
