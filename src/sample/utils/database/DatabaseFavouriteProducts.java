@@ -116,12 +116,10 @@ public class DatabaseFavouriteProducts {
             }
         }
         for(String owner: allUsersWhoAddedTheProduct){
-            //because the id wont be the same
             CollectionController.deactivatedFavouriteProductsMap.get(owner).removeIf(p -> p.getDescription().equals(product.getDescription()));
         }
         universalDeletionFromDeactivated(product, DataBaseConstants.DELETE_FROM_DEACTIVATED_FAVOURITE_PRODUCTS);
         deleteFavouriteByDescription(product);
-        //tr da trie i ot favourite tuka
     }
    private static void deleteFavouriteByDescription(Product product){
         universalDeletionFromDeactivated(product,DataBaseConstants.DELETE_FROM_ACTIVE_FAVOURITE_PRODUCTS_By_DESCRIPTION);
@@ -132,7 +130,6 @@ public class DatabaseFavouriteProducts {
             }
         }
         for(String owner: allUsersWhoAddedTheProduct){
-            //because the id wont be the same
             CollectionController.favouriteProductsMap.get(owner).removeIf(p -> p.getDescription().equals(product.getDescription()));
         }
     }
@@ -163,12 +160,11 @@ public class DatabaseFavouriteProducts {
             }
         }
         if(database.equals(DataBaseConstants.INSERT_INTO_DEACTIVATED_FAVOURITE_PRODUCTS)) {
-            deleteFavouriteByDescription(product);//tashako misla che e tuka
+            deleteFavouriteByDescription(product);
         }
 
     }
 
-    //breakovete moje da dada zor ako ima ednakvi produkti i nema da se iztriqaa
     private static void universalDeletionFromDeactivated(Product product, String database){
         try {
             Connection connection = DatabaseConnection.getConnection();
