@@ -11,6 +11,7 @@ import javafx.scene.control.TextField;
 import sample.entities.Product;
 import sample.utils.CollectionController;
 import sample.utils.SceneController;
+import sample.utils.constants.DataBaseConstants;
 import sample.utils.constants.FXMLFiles;
 import sample.utils.constants.LabelConstants;
 import sample.utils.database.DatabaseFavouriteProducts;
@@ -57,12 +58,13 @@ public class EditProductController implements Initializable {
             selectedProduct.setName(productNameTextField.getText());
             selectedProduct.setPrice(Double.parseDouble(priceTextField.getText()));
             selectedProduct.setDescription(descriptionTextArea.getText());
-            DatabaseProducts.editProduct(selectedProduct);
             //Favourites
             if(!ifProductWasChanged.equals(selectedProduct)){
+                DatabaseProducts.editProduct(selectedProduct);
                 DatabaseFavouriteProducts.readFavouriteProducts();
                 DatabaseFavouriteProducts.deactivatedDelete(ifProductWasChanged);
                 DatabaseFavouriteProducts.readFavouriteProducts();
+                DatabaseProducts.readFromDB(DataBaseConstants.SELECT_FROM_PRODUCTS,CollectionController.allProductsList);
             }
             successfulEditingLabel.setText(LabelConstants.EDITED_SUCCESSFULLY);
             descriptionTextArea.clear();
